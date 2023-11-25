@@ -1,0 +1,120 @@
+/* Add CSS here */
+
+:root {
+  --font: "Poppins", sans-serif;
+  --bg-color: whitesmoke;
+  --card-color: white;
+}
+
+before,
+after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.card {
+  background-color: var(--card-color);
+  height: 20rem;
+  width: 25rem;
+  border-radius: 1.2rem;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.inner__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.file__locked {
+  border: 1px solid red;
+  width: 5.5rem;
+  font-size: 0.8rem;
+  margin-left: 9.5rem;
+  color: white;
+  background-color: rgb(255, 136, 136);
+}
+
+.card__title {
+  margin-top: 1.8rem;
+  font-size: 0.9rem;
+}
+
+.card__info {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.help__center {
+  font-size: 0.8rem;
+}
+
+.help__center a {
+  color: blue;
+}
+
+/* Help Center */
+
+.help__card {
+  position: abolute;
+  background-color: white;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.help__inner {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-brands {
+  font-size: 5rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: scale(1.2);
+}
+
+/* onClick animation */
+
+.card,
+.help__card {
+  transition: 0.5s all ease-in-out;
+  scale: 1;
+}
+
+.help__card {
+  display: none;
+  /* initially hidden */
+  scale: 0;
+  /* for fade-in effect */
+}
